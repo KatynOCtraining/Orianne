@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orianne</title>
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#accueil">Accueil</a></li>
+          <li class="nav-item"><a href="#galerie">Galerie</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-banner">
+        <div class="hero-content">
+          <h1>Orianne</h1>
+          <p>Bienvenue dans mon univers artistique</p>
+        </div>
+      </section>
+
+      <section class="gallery-controls">
+        <button id="large-view-button">Grand Affichage</button>
+        <button id="grid-view-button">Affichage en Grille</button>
+      </section>
+
+      <section class="gallery large-view">
+        <button class="prev" id="prev-button">&#10094;</button>
+        <div class="gallery-item active">
+          <img src="./ressources/images/1.png" alt="Image 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="./ressources/images/1.png" alt="Image 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="./ressources/images/2.png" alt="Image 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="./ressources/images/3.png" alt="Image 3" />
+        </div>
+        <div class="gallery-item">
+          <img src="./ressources/images/4.png" alt="Image 4" />
+        </div>
+        <div class="gallery-item">
+          <img src="./ressources/images/5.png" alt="Image 5" />
+        </div>
+        <div class="gallery-item">
+          <img src="./ressources/images/6.png" alt="Image 6" />
+        </div>
+        <div class="gallery-item">
+          <img src="./ressources/images/7.png" alt="Image 6" />
+        </div>
+        <div class="gallery-item">
+          <img src="./ressources/images/8.png" alt="Image 6" />
+        </div>
+        <div class="gallery-item">
+          <img src="./ressources/images/9.png" alt="Image 6" />
+        </div>
+        <button class="next" id="next-button">&#10095;</button>
+      </section>
+    </main>
+
+    <footer></footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

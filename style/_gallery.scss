@@ -1,0 +1,74 @@
+.gallery-controls {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.gallery-controls button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+.gallery-item {
+  display: none;
+  flex: 1 1 100%;
+  transition: all 0.3s ease-in-out;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-item.active {
+  display: flex;
+}
+
+.gallery-item img {
+  max-width: 100%;
+  max-height: 80vh; /* Pour s'assurer que l'image ne dépasse pas la hauteur de la vue */
+  height: auto;
+  border-radius: 10px;
+  margin: auto; /* Centrer l'image */
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 10px;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 10px;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.grid-view .gallery-item {
+  display: block;
+  flex: 1 1 calc(33.333% - 20px);
+}

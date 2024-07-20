@@ -1,0 +1,30 @@
+.hero-banner {
+  height: 100vh;
+  background-image: url("../ressources/background/background.jpg");
+  background-size: cover; /* Ajuste la taille de l'image pour couvrir entièrement le conteneur */
+  background-position: center; /* Centre l'image */
+  background-repeat: no-repeat; /* Évite la répétition de l'image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  padding: 20px;
+  border-radius: 10px;
+  background: none;
+}
+
+.hero-banner h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3em;
+  margin-bottom: 10px;
+  background: none;
+}
+
+.hero-banner p {
+  font-size: 1.5em;
+  background: none;
+}
