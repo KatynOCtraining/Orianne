@@ -39,16 +39,30 @@ body {
 }
 
 .hero-banner {
+  position: relative; /* Nécessaire pour positionner le pseudo-élément */
   height: 100vh;
   background-image: url("../ressources/background/background.jpg");
-  background-size: cover; /* Ajuste la taille de l'image pour couvrir entièrement le conteneur */
-  background-position: center; /* Centre l'image */
-  background-repeat: no-repeat; /* Évite la répétition de l'image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: white;
+  z-index: 1; /* Assure que le contenu est au-dessus du pseudo-élément */
+}
+
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dégradé opaque pour assombrir l'image de fond */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)); /* Dégradé vertical */
+  z-index: -1; /* Place le pseudo-élément derrière le contenu */
 }
 
 .hero-content {
@@ -86,6 +100,10 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
+}
+
+.large-view {
+  margin: 0 auto;
 }
 
 .gallery-item {
@@ -146,6 +164,17 @@ body {
   flex: 1 1 calc(33.333% - 20px);
 }
 
+/* Masquer les boutons de navigation dans la vue en grille */
+.gallery.grid-view .prev,
+.gallery.grid-view .next {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .large-view {
+    max-width: 50%; /* Réduire la largeur de l'élément à 80% de la largeur de l'écran */
+  }
+}
 .hero-banner h1 {
   font-family: "Playfair Display", serif;
 }
@@ -190,21 +219,20 @@ footer {
 }
 
 .social-icons {
+  display: flex;
+  flex-direction: row;
   margin-bottom: 10px;
+  gap: 15%;
+  justify-content: center;
 }
 
 .social-icon {
   margin: 0 10px;
   display: inline-block;
+  font-size: 3em;
 }
 
-.social-icon img {
-  width: 30px;
-  height: 30px;
-  transition: transform 0.3s;
-}
-
-.social-icon img:hover {
+.social-icon :hover {
   transform: scale(1.2);
 }
 

@@ -43,7 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (scrollDownButton && gallerySection) {
     scrollDownButton.addEventListener("click", () => {
-      gallerySection.scrollIntoView({ behavior: "smooth" });
+      const galleryTop =
+        gallerySection.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: galleryTop,
+        behavior: "smooth",
+      });
     });
   }
 

@@ -17,6 +17,10 @@
   position: relative;
 }
 
+.large-view {
+  margin: 0 auto;
+}
+
 .gallery-item {
   display: none;
   flex: 1 1 100%;
@@ -71,4 +75,16 @@
 .grid-view .gallery-item {
   display: block;
   flex: 1 1 calc(33.333% - 20px);
+}
+
+/* Masquer les boutons de navigation dans la vue en grille */
+.gallery.grid-view .prev,
+.gallery.grid-view .next {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .large-view {
+    max-width: 50%; /* Réduire la largeur de l'élément à 80% de la largeur de l'écran */
+  }
 }
