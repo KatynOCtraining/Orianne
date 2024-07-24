@@ -2,6 +2,9 @@
 @import "./navbar";
 @import "./hero-banner";
 @import "./gallery";
+@import "./font";
+@import "./scrolldown";
+@import "./footer";
 
 html,
 body,
@@ -88,9 +91,8 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font-family: "Roboto Condensed", sans-serif;
   vertical-align: baseline;
-  background: $darkgreen;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -127,4 +129,8 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+main {
+  background: $darkgreen;
 }

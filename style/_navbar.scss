@@ -5,6 +5,7 @@
   top: 0; /* La positionne en haut de la page */
   width: 100%; /* Assure qu'elle prend toute la largeur de la page */
   z-index: 1000; /* Assure qu'elle reste au-dessus des autres éléments */
+  margin: 0;
 }
 
 .nav-list {

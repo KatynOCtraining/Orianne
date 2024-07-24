@@ -15,20 +15,21 @@
 
   <body>
     <header>
-      <nav class="navbar">
+      <nav class="navbar" id="navbar">
         <ul class="nav-list">
-          <li class="nav-item"><a href="#accueil">Accueil</a></li>
-          <li class="nav-item"><a href="#galerie">Galerie</a></li>
+          <li class="nav-item"><a href="#hero-banner">Accueil</a></li>
+          <li class="nav-item"><a href="#gallery">Galerie</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="hero-banner">
+      <section class="hero-banner" id="hero-banner">
         <div class="hero-content">
-          <h1>Orianne</h1>
+          <h1 id="title">Orianne</h1>
           <p>Bienvenue dans mon univers artistique</p>
         </div>
+        <button class="scroll-down" id="scroll-down-button">&#9660;</button>
       </section>
 
       <section class="gallery-controls">
@@ -36,14 +37,12 @@
         <button id="grid-view-button">Affichage en Grille</button>
       </section>
 
-      <section class="gallery large-view">
+      <section class="gallery large-view" id="gallery">
         <button class="prev" id="prev-button">&#10094;</button>
         <div class="gallery-item active">
           <img src="./ressources/images/1.png" alt="Image 1" />
         </div>
-        <div class="gallery-item">
-          <img src="./ressources/images/1.png" alt="Image 1" />
-        </div>
+
         <div class="gallery-item">
           <img src="./ressources/images/2.png" alt="Image 2" />
         </div>
@@ -72,7 +71,37 @@
       </section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="footer-content">
+        <div class="social-icons">
+          <a
+            href="https://www.facebook.com"
+            class="social-icon"
+            target="_blank"
+            aria-label="Facebook"
+          >
+            <img src="path-to-your-facebook-icon" alt="Facebook" />
+          </a>
+          <a
+            href="https://www.instagram.com"
+            class="social-icon"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <img src="path-to-your-instagram-icon" alt="Instagram" />
+          </a>
+          <a
+            href="https://www.twitter.com"
+            class="social-icon"
+            target="_blank"
+            aria-label="Twitter"
+          >
+            <img src="path-to-your-twitter-icon" alt="Twitter" />
+          </a>
+        </div>
+        <p>&copy; 2024 Orianne. Tous droits réservés.</p>
+      </div>
+    </footer>
     <script src="./script.js"></script>
   </body>
 </html>

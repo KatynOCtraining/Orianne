@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevButton = document.getElementById("prev-button");
   const nextButton = document.getElementById("next-button");
   const items = document.querySelectorAll(".gallery-item");
+  const scrollDownButton = document.getElementById("scroll-down-button");
+  const gallerySection = document.querySelector(".gallery"); // Utilisation correcte de la classe 'gallery'
 
   let currentIndex = 0;
 
@@ -38,6 +40,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   prevButton.addEventListener("click", showPrevItem);
   nextButton.addEventListener("click", showNextItem);
+
+  if (scrollDownButton && gallerySection) {
+    scrollDownButton.addEventListener("click", () => {
+      gallerySection.scrollIntoView({ behavior: "smooth" });
+    });
+  }
 
   // Initial display
   showItem(currentIndex);
